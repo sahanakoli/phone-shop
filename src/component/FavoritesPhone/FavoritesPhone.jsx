@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import swal from 'sweetalert';
+import Banner from '../Banner/Banner';
 
 const FavoritesPhone = ({phoneCard}) => {
 
@@ -26,7 +27,7 @@ const FavoritesPhone = ({phoneCard}) => {
            swal("Good job!", "You clicked the button!", "success");
           }
           else{
-            alert('Already Added');
+            swal("Already Added");
           }
 
         }
@@ -34,12 +35,15 @@ const FavoritesPhone = ({phoneCard}) => {
         
     return (
         <div>
+            <div>
+                <Banner></Banner>
+            </div>
             <div className=" mt-8  flex justify-center  items-center">
             <div className="relative flex w-6/12 max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
-    <img
-      src={image}
-      alt="image"
+              <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+                 <img
+               src={image}
+              alt="image"
       className="h-full w-full object-cover"
     />
   </div>
@@ -85,8 +89,8 @@ const FavoritesPhone = ({phoneCard}) => {
     </a>
   </div>
 </div>
-        </div>
-        </div>
+          </div>
+         </div>
     );
 };
 

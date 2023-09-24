@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from "react";
-
-import FavoritesPhone from "../../component/FavoritesPhone/FavoritesPhone";
+import FavoritesCard from "../../component/FavoritesCard/FavoritesCard";
 
 
 const Favorites = () => {
@@ -27,11 +26,9 @@ const Favorites = () => {
         }
         else{
            
-            setNoFund('no data fund');
+            setNoFund('No Data Fund');
         }
      },[])
-
-     console.log(favorites)
 
      const handleRemove = () => {
         localStorage.clear()
@@ -52,9 +49,9 @@ const Favorites = () => {
                 }
               <div className=" grid grid-cols-2 gap-5">
                 {
-                    isShow ? favorites.map(phoneCard => <FavoritesPhone key={phoneCard.id} phoneCard={phoneCard}></FavoritesPhone>)
+                    isShow ? favorites.map(phoneCard => <FavoritesCard key={phoneCard.id} phoneCard={phoneCard}></FavoritesCard>)
                     :
-                    favorites.slice(0, 4).map(phoneCard => <FavoritesPhone key={phoneCard.id} phoneCard={phoneCard}></FavoritesPhone>)
+                    favorites.slice(0, 4).map(phoneCard => <FavoritesCard key={phoneCard.id} phoneCard={phoneCard}></FavoritesCard>)
                 }
               </div>
               {

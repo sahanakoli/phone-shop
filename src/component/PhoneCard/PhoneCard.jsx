@@ -6,8 +6,6 @@ import FavoritesPhone from "../FavoritesPhone/FavoritesPhone";
 
 
 
-
-
 const PhoneCard = () => {
 
     const [phoneCard, setPhoneCard] = useState({});

@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 
 const FavoritesPhone = ({phoneCard}) => {
 
-    const {id, image, phone_name, brand_name } = phoneCard || {};
+    const {id, image, phone_name, brand_name, price } = phoneCard || {};
     
     const handleAddToFavorite = () =>{
      
@@ -50,6 +50,9 @@ const FavoritesPhone = ({phoneCard}) => {
     <h4 className="mb-2 mt-5 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
       {phone_name}
     </h4>
+    <p className="mb-2 mt-5 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+       $ {price}
+    </p>
     
     <a className="inline-block" href="#">
       
